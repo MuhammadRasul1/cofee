@@ -44,9 +44,21 @@ img {
 }
 
 .container-primary {
-    max-width: 1111px;
+    max-width: 1131px;
     margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
+
+/* .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  } */
 
 .btn {
     display: inline-block;
@@ -75,6 +87,7 @@ img {
 /* Header */
 
 .site-header {
+    background-color: var(--bg-color);
     padding-top: 43px;
     padding-bottom: 43px;
 }
@@ -132,16 +145,11 @@ img {
 /* hero */
 
 .hero-section {
-    padding-bottom: 262px;
-}
-
-.hero {
+    padding-top: 116px;
+    padding-bottom: 116px;
     background-image: url(../img/hero-bg-img.jpg);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    max-width: 1280px;
-    max-height: 600px;
-    padding: 117px 85px;
 }
 
 .hero__title {
@@ -178,6 +186,7 @@ img {
 /* collection */
 
 .collection-section {
+    padding-top: 262px;
     padding-bottom: 200px;
 }
 
@@ -291,7 +300,6 @@ img {
 
 .choose__item:not(:last-child) {
     margin-right: 30px;
-    
 }
 
 .choose__img {
@@ -331,12 +339,6 @@ img {
     padding-bottom: 200px;
 }
 
-.info {
-    margin-left: 189px;
-    margin-right: 230px;
-
-}
-
 .info__title {
     margin-top: 0;
     margin-bottom: 80px;
@@ -355,6 +357,7 @@ img {
     align-items: start;
     justify-content: space-between;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 .info__list::before {
@@ -369,7 +372,7 @@ img {
 }
 
 .info__item {
-    flex-wrap: wrap;
+    max-width: 285px;
 }
 
 .info__item:not(:last-child) {
@@ -411,7 +414,7 @@ img {
 }
 
 .info__desc {
-    max-width: 285px;
+    width: 285px;
     margin: 0;
 }
 
@@ -427,10 +430,10 @@ img {
 /* footer */
 
 .site-footer {
-    max-width: 1300px;
     margin: 0 80px;
-    padding: 47px 10px;
-    background: #2C343E;
+    padding-top: 47px;
+    padding-bottom: 47px;
+    background-color: #2C343E;
 }
 
 .footer {
@@ -487,8 +490,9 @@ img {
 }
 
 .footer__list {
-    margin: 0;
-    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
     list-style: none;
     display: flex;
     align-items: center;
@@ -516,3 +520,122 @@ img {
     background-color: #66D2CF;
 } */
 
+@media (max-width: 768px) {
+    .container {
+        max-width: 708px;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .container-primary {
+        max-width: 583px;
+        margin: 0 auto;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    /* hero */
+
+    .hero-section {
+        background-size: cover;
+        max-width: 689px;
+        max-height: 500px;
+        padding-top: 104px;
+        padding-bottom: 104px;
+    }
+
+    .hero__title {
+        margin-bottom: 24px;
+        max-width: 329px;
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .hero__desc {
+        margin-bottom: 40px;
+        max-width: 398px;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    /* collection */
+
+    .collection-section {
+        padding-top: 203px;
+        padding-bottom: 144px;
+    }
+
+    .collection__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .collection__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .collection__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 32px;
+    }
+
+    .collection__text-wrapper {
+        max-width: 282px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .collection__title {
+        margin-top: 0;
+        margin-bottom: 24px;
+        text-align: start;
+    }
+
+    .collection__desc {
+        max-width: 280px;
+        text-align: start;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    /* choose */
+
+    .choose-section {
+        padding-top: 56px;
+        padding-bottom: 368px;
+    }
+
+    .choose__title {
+        font-size: 32px;
+    }    
+
+    .choose__desc {
+        margin-top: 24px;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .choose__list {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .choose__item {
+        max-width: 573px;
+        display: flex;
+        align-items: center;
+        padding: 41px 48px 41px 70px;
+        margin-bottom: 24px;
+    }
+
+    .choose__text-wrapper {
+        max-width: 344px;
+    }
+}
