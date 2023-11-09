@@ -1,0 +1,13 @@
+.container-primary {
+    max-width: 1111px;
+    margin: 0 auto;
+}
+
+@include breakpoint-down (456px) {
+    .container-primary {
+        max-width: 289px;
+        margin: 0 auto;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

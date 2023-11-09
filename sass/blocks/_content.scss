@@ -1,62 +1,4 @@
-
-:root {
-    --dark-green: #0E8784;
-    --text-color: #333D4B;
-    --number-color: #FDD6BA;
-    --link-color: #83888F;
-    --bg-color: #FEFCF7;
-}
-
-/* create */
-
-.create-section {
-    padding-top: 134px;
-    padding-bottom: 134px;
-    background-image: url(../img/create-img.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.create {
-    display: flex;
-    flex-direction: column;
-}
-
-.create__title {
-    margin-top: 0;
-    margin-bottom: 32px;
-    color: var(--bg-color);
-    font-family: Fraunces;
-    font-size: 72px;
-    font-weight: 900;
-    line-height: 72px; 
-}
-
-.create__desc {
-    margin: 0;
-    max-width: 445px;
-    color: var(--bg-color);
-    opacity: 0.8;
-}
-
-/* info-night */
-
-.info__section-night {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin-top: 168px;
-    background-color: #2C343E;
-}
-
-.info__subtitle--night {
-    color: var(--bg-color);
-}
-
-.info__desc--night {
-    color: var(--bg-color);
-}
-
-/* content__form */
+/* content */
 
 .content-section {
     padding-top: 146px;
@@ -85,12 +27,29 @@
     max-width: 255px;
 }
 
-.content__item:active {
-    opacity: 1;
+
+.content__item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.content__item:not(:first-child) {
+    margin-top: 24px;
 }
 
 .content__item:hover {
+    opacity: 1;
+}
+
+.content__item:hover .content__number {
     color: #0E8784;
+}
+
+.content__item:hover .content__title {
+    color: #333D4B;
+}
+
+.content__item-link {
+    text-decoration: none;
 }
 
 .content__item:after {
@@ -101,14 +60,6 @@
     width: 255px;
     height: 1px;
     content: "";
-}
-
-.content__item:not(:last-child) {
-    margin-bottom: 24px;
-}
-
-.content__item:not(:first-child) {
-    margin-top: 24px;
 }
 
 .content__number {
@@ -124,14 +75,14 @@
     display: inline-block;
     margin: 0;
     margin-left: 25px;
-    color: #333D4B;
+    color: #83888F;
     font-family: Fraunces;
     font-size: 24px;
     font-weight: 900;
     line-height: 32px; 
 }
 
-/* form */
+/* content form */
 
 .content__form {
     margin-left: 125px;
@@ -172,12 +123,10 @@
 
 .content__arrow:hover  {
     fill: #66D2CF;
-    transition: fill 1s;
 }
 
 .content__arrow:disabled {
     fill: #0E8784;
-    transition: fill 0.5s;
 }
 
 .content__form-list-wrapper {
@@ -193,26 +142,29 @@
     flex-wrap: wrap;
 }
 
-.content__form-wrapper {
+.content__form-text-wrapper {
     padding: 36px 28px 87px 28px;
     border-radius: 8px;
     background: #F4F1EB;
     max-width: 228px;
 }
 
-.content__form-wrapper:hover {
+.content__form-text-wrapper:hover {
     background-color: var(--number-color);
 }
 
-.content__form-wrapper--selected {
-    padding: 36px 28px 87px 28px;
-}
-/* skajdkasjkdjkasdjljlasdsadasdasdasdasdasdasdasdasdas */
-.content__form-wrapper + .content__form-input:checked  {
+.content__form-input:checked + .content__form-text-wrapper  {
     background-color: var(--dark-green);
+}
+
+.content__form-input:checked + .content__form-text-wrapper .content__form-subtitle {
     color: white;
 }
-/* dsadasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+
+.content__form-input:checked + .content__form-text-wrapper .content__form-desc {
+    color: white;
+}
+
 .content__form-text-wrapper {
     margin: 0;
     display: inline-block;
@@ -301,3 +253,78 @@
     background: #E2DEDB;
 }
 
+
+@include breakpoint-down(1120px) {
+    /* content */
+
+    .content {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .content__list {
+        display: none;
+    }
+
+    .content__form {
+        margin-left: 0;
+    }
+
+    .content__form-title {
+        font-size: 32px;     
+    }
+
+    .order__btn  {
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+}
+
+@include breakpoint-down(710px) {
+    .content__form-title {  
+        font-size: 24px;
+        line-height: 28px;  
+    }
+
+    .content__form-item-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        width: 100%;
+    }
+
+    .content__form-wrapper:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    .content__form-wrapper {
+        width: 100%;
+    }
+
+    .content__form-text-wrapper {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 24px 25px;
+    }
+
+    .content__form-desc {
+        max-width: 278px;
+    }
+}
+
+@include breakpoint-down(375px) {
+    .content__form-title {
+        max-width: 240px;
+    }
+
+    .content__order {
+        max-width: 328px;
+        padding: 32px 25px;
+    }
+
+    .content__order-text {
+        max-width: 279px;
+    }
+}

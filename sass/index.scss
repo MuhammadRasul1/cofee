@@ -1,38 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:opsz,wght@9..144,900&display=swap');
+@import "variables";
+@import "general";
+@import "mixin";
+@import "visually-hidden";
+@import "container";
+@import "container-primary";
+@import "btn";
+@import "blocks/blocks";
 
-/* banner */
-
-.banner-section {
-    padding-top: 137px;
-    padding-bottom: 137px;
-    background-image: url(../img/banner-img.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.banner {
-    display: flex;
-    flex-direction: column;
-}
-
-.banner__title {
-    margin: 0;
-    color: var(--bg-color);
-    font-family: Fraunces;
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 48px; 
-}
-
-.banner__desc {
-    margin-top: 24px;
-    margin-bottom: 0;
-    max-width: 445px;
-    color: var(--bg-color);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px; 
-}
 
 /* commitment */
 
@@ -191,3 +166,9 @@
 .headquarters__info--link {
     text-decoration: none;
 }
+
+
+
+
+
+

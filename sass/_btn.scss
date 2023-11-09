@@ -1,0 +1,23 @@
+.btn {
+    display: inline-block;
+    padding: 15px 31px;
+    border-radius: 6px;
+    background: var(--dark-green);
+    color: var(--bg-color);
+    text-align: center;
+    font-family: Fraunces;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 25px
+}
+
+.btn:hover {
+    background-color: #66D2CF;
+    transition: background-color 1.5s;
+}
+
+.btn:disabled {
+    background-color: #E2DEDB;
+    transition: background-color 1s;
+}

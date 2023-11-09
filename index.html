@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - cofferoasters</title>
-    <link rel="stylesheet" href="about.html">
-    <link rel="stylesheet" href="create.html">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/create.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container header">
+<div class="container">
+    <header class="site-header open-btn">
+        <div class="header">
             <a class="header__logo-link" href="index.html">
                 <img class="header__logo" src="img/icon/logo.svg" alt="cofeeroasters" width="236" height="26">
             </a>
+            <button class="header__burger-btn" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="header__nav">
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
@@ -32,15 +34,17 @@
         </div>
     </header>
     <main class="main">
-        <section class="hero-section container">
+        <section class="hero-section">
             <div class="container-primary hero">
-                <h1 class="hero__title">Great coffee made simple.</h1>
+                <h2 class="hero__title">Great coffee made simple.</h2>
                 <p class="hero__desc">Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees from our best roasters <br> delivered directly to your door, at your schedule.</p>
                 <a class="hero__link btn" href="create.html">Create your plan</a>
             </div>
         </section>
         <section class="collection-section">
             <div class="container-primary collection">
+                <h1 class="visually-hidden">Coffee in Tashreknt</h1>
+                <h2 class="collection__intro">our collection</h2>
                 <ul class="collection__list">
                     <li class="collection__item">
                         <img class="collection__img" src="img/collection-img(1).png" alt="Gran Espresso" width="255" height="193">
@@ -51,21 +55,21 @@
                     </li>
                     <li class="collection__item">
                         <img class="collection__img" src="img/collection-img(2).png" alt="Planalto" width="255" height="193">
-                        <div class="info__text-wrapper">
+                        <div class="collection__text-wrapper">
                             <h3 class="collection__title">Planalto</h3>
                             <p class="collection__desc">Brazilian dark roast with rich and velvety body, and hints of fruits and nuts.</p>
                         </div>
                     </li>
                     <li class="collection__item">
                         <img class="collection__img" src="img/collection-img(3).png" alt="Piccollo" width="255" height="193">
-                        <div class="info__text-wrapper">
+                        <div class="collection__text-wrapper">
                             <h3 class="collection__title">Piccollo</h3>
                             <p class="collection__desc">Mild and smooth blend featuring notes of toasted almond and dried cherry.</p>
                         </div>
                     </li>
                     <li class="collection__item">
                         <img class="collection__img" src="img/collection-img(4).png" alt="Danche" width="255" height="193">
-                        <div class="info__text-wrapper">
+                        <div class="collection__text-wrapper">
                             <h3 class="collection__title">Danche</h3>
                             <p class="collection__desc">Ethiopian hand-harvested blend densely packed with vibrant fruit notes.</p>
                         </div>
@@ -73,10 +77,13 @@
                 </ul>
             </div>
         </section>
-        <section class="choose-section container">
+        <section class="choose-section">
             <div class="container-primary choose">
-                <h2 class="choose__title">Why choose us?</h2>
-                <p class="choose__desc">A large part of our role is choosing which particular coffees will be featured in our range. This means working closely with the best coffee growers to give you a more impactful experience on every level.</p>
+                <h2 class="visually-hidden">Choose</h2>
+                <div class="choose__top">
+                    <p class="choose__title">Why choose us?</p>
+                    <p class="choose__desc">A large part of our role is choosing which particular coffees will be featured in our range. This means working closely with the best coffee growers to give you a more impactful experience on every level.</p>
+                </div>
                 <ul class="choose__list">
                     <li class="choose__item">
                         <img class="choose__img" src="img/icon/why-choose-img(1).svg" alt="Best quality" width="72" height="72">
@@ -105,7 +112,7 @@
         <section class="info-section">
             <div class="container-primary info">
                 <h2 class="info__title">How it works</h2>
-                <ul class="info__list">
+                <ol class="info__list">
                     <li class="info__item">
                         <img class="info__oval info__oval--light" src="img/icon/Oval.svg" alt="Oval" width="31" height="31">
                         <span class="info__number info__number--light">01</span>
@@ -124,7 +131,7 @@
                         <h3 class="info__subtitle info__subtitle--light">Receive and enjoy!</h3>
                         <p class="info__desc info__desc--light">We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.</p>
                     </li>
-                </ul>
+                </ol>
                 <a class="info__link btn" href="create.html">Create your plan</a>
             </div>
         </section>
@@ -168,5 +175,7 @@
             </ul>
         </div>
     </footer>
+</div>
+    <script defer src="js/index.js"></script>
 </body>
 </html>

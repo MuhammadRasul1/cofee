@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create your plan - cofferoasters</title>
-    <link rel="stylesheet" href="about.html">
-    <link rel="stylesheet" href="index.html">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/create.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+<div class="container">
     <header class="site-header">
-        <div class="container header">
+        <div class="header">
             <a class="header__logo-link" href="index.html">
                 <img class="header__logo" src="img/icon/logo.svg" alt="cofeeroasters" width="236" height="26">
             </a>
+            <button class="header__burger-btn" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="header__nav">
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
@@ -32,15 +34,16 @@
         </div>
     </header>
     <main class="main">
-        <section class="create-section container">
+        <section class="create-section">
+            <h1 class="visually-hidden">Coffee Create plan</h1>
             <div class="container-primary create">
-                <h1 class="create__title">Create plan</h1>
-                <p class="create__desc">Coffee the way you wanted it to be. For coffee delivered tomorrow, or next week. For whatever brew method you use. For choice, for convenience, for quality.</p>
+                <h2 class="create__title">Create plan</h2>
+                <p class="create__desc">Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.</p>
             </div>
         </section>
-        <section class="info__section-night container">
+        <section class="info__section-night">
             <div class="container-primary info info--night">
-                <ul class="info__list info__list--night">
+                <ol class="info__list info__list--night">
                     <li class="info__item">
                         <img class="info__oval info__oval--night" src="img/icon/Oval-night.svg" alt="Oval" width="31" height="31">
                         <span class="info__number info__number--light">01</span>
@@ -59,42 +62,49 @@
                         <h3 class="info__subtitle info__subtitle--night">Receive and enjoy!</h3>
                         <p class="info__desc info__desc--night">We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.</p>
                     </li>
-                </ul>
+                </ol>
             </div>
         </section>
         <section class="content-section">
-            <div class="container content">
+            <div class="container-primary content">
                 <form action="https://echo.htmlacademy.ru" method="get">
-                    <ul class="content__list">
+                    <ol class="content__list">
                         <li class="content__item">
-                            <label for=""><!--dsaaaaaaaaaaaaaa-->
-                                <input class="content__form-input visually-hidden" type="radio" id="capsule" name="cofee" value="Capsule">
+                            <a class="content__item-link" href="#drink-coffee">
                                 <span class="content__number">01</span>
-                                <strong class="content__title">Preferences</strong>
-                            </label>
+                                <span class="content__title">Preferences</span>
+                            </a>
                         </li>
                         <li class="content__item">
-                            <span class="content__number">02</span>
-                            <h3 class="content__title">Bean Type</h3>
+                            <a class="content__item-link" href="#type-coffee">
+                                <span class="content__number">02</span>
+                                <span class="content__title">Bean Type</span>
+                            </a>
                         </li>
                         <li class="content__item">
-                            <span class="content__number">03</span>
-                            <h3 class="content__title">Quantity</h3>
+                            <a class="content__item-link" href="#how-much-coffee">
+                                <span class="content__number">03</span>
+                                <span class="content__title">Quantity</span>
+                            </a>
                         </li>
                         <li class="content__item">
-                            <span class="content__number">04</span>
-                            <h3 class="content__title">Grind Option</h3>
+                            <a class="content__item-link" href="#them-coffee">
+                                <span class="content__number">04</span>
+                                <span class="content__title">Grind Option</span>
+                            </a>
                         </li>
                         <li class="content__item">
-                            <span class="content__number">05</span>
-                            <h3 class="content__title">Deliveries</h3>
+                            <a class="content__item-link" href="#deliver-coffee">
+                                <span class="content__number">05</span>
+                                <span class="content__title">Deliveries</span>
+                            </a>
                         </li>
-                    </ul>
+                    </ol>
                 </form>
                 <form class="content__form" action="https://echo.htmlacademy.ru" method="get">
                     <ul class="content__form-list">
                         <!--Content-item 1-->
-                        <li class="content__form__item">
+                        <li class="content__form__item" id="drink-coffee">
                             <div class="content__form-title-wrapper">
                                 <h2 class="content__form-title">How do you drink your coffee?</h2>
                                 <span class="content__form-arrow">
@@ -105,22 +115,22 @@
                             </div>
                             <ul class="content__form-list-wrapper">
                                 <li class="content__form-item-wrapper">
-                                    <label class="content__form-wrapper content__form-wrapper--selected" for="capsule">
-                                        <input class="content__form-input visually-hidden" type="radio" id="capsule" name="cofee" value="Capsule">
+                                    <label class="content__form-wrapper" for="capsule">
+                                        <input class="content__form-input visually-hidden" type="radio" id="capsule" name="drink" value="Capsule">
                                         <span class="content__form-text-wrapper">
                                             <strong class="content__form-subtitle">Capsule</strong>
                                             <span class="content__form-desc">Compatible with Nespresso systems and similar brewers</span>
                                         </span>
                                     </label>
-                                    <label class="content__form-wrapper content__form-wrapper--selected" for="filter">
-                                        <input class="content__form-input visually-hidden" type="radio" id="filter" name="cofee" value="Filter">
+                                    <label class="content__form-wrapper" for="filter">
+                                        <input class="content__form-input visually-hidden" type="radio" id="filter" name="drink" value="Filter">
                                         <span class="content__form-text-wrapper">
                                             <strong class="content__form-subtitle">Filter</strong>
                                             <span class="content__form-desc">For pour over or drip methods like Aeropress, Chemex, and V60</span>
                                         </span>
                                     </label>
-                                    <label class="content__form-wrapper content__form-wrapper--selected" for="espresso">
-                                        <input class="content__form-input visually-hidden" type="radio" id="espresso" name="cofee" value="Espresso">
+                                    <label class="content__form-wrapper" for="espresso">
+                                        <input class="content__form-input visually-hidden" type="radio" id="espresso" name="drink" value="Espresso">
                                         <span class="content__form-text-wrapper">
                                            <strong class="content__form-subtitle">Espresso</strong>
                                            <span class="content__form-desc">Compatible with Nespresso systems and similar brewers</span>
@@ -130,7 +140,7 @@
                             </ul>
                         </li>
                         <!--Content-item 2-->
-                        <li class="content__form__item">
+                        <li class="content__form__item" id="type-coffee">
                             <div class="content__form-title-wrapper">
                                 <h2 class="content__form-title">What type of coffee?</h2>
                                 <span class="content__form-arrow">
@@ -166,7 +176,7 @@
                             </ul>
                         </li>
                         <!--Content-item 3-->
-                        <li class="content__form__item">
+                        <li class="content__form__item" id="how-much-coffee">
                             <div class="content__form-title-wrapper">
                                 <h2 class="content__form-title">How much would you like?</h2>
                                 <span class="content__form-arrow">
@@ -202,7 +212,7 @@
                             </ul>
                         </li>
                         <!--Content-item 4-->
-                        <li class="content__form__item">
+                        <li class="content__form__item" id="them-coffee">
                             <div class="content__form-title-wrapper">
                                 <h2 class="content__form-title">Want us to grind them?</h2>
                                 <span class="content__form-arrow">
@@ -238,7 +248,7 @@
                             </ul>
                         </li>
                         <!--Content-item 5-->
-                        <li class="content__form__item">
+                        <li class="content__form__item" id="deliver-coffee">
                             <div class="content__form-title-wrapper">
                                 <h2 class="content__form-title">How often should we deliver?</h2>
                                 <span class="content__form-arrow">
@@ -322,5 +332,6 @@
             </ul>
         </div>
     </footer>
+</div>
 </body>
 </html>
