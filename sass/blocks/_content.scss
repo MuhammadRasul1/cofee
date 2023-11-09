@@ -228,7 +228,7 @@
     line-height: 40px;
 }
 
-.order__btn {
+.content__order-btn {
     display: block;
     max-width: 217px;
     margin-left: auto;
@@ -245,11 +245,11 @@
     line-height: 25px;
 }
 
-.order__btn:hover {
+.content__order-btn:hover {
     background: #66D2CF;
 }
 
-.order__btn:disabled {
+.content__order-btn:disabled {
     background: #E2DEDB;
 }
 
@@ -274,7 +274,7 @@
         font-size: 32px;     
     }
 
-    .order__btn  {
+    .content__order-btn  {
         margin: 0 auto;
         margin-top: 40px;
     }
